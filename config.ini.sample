@@ -1,0 +1,19 @@
+; USER_NAME是你在群里的名称，名称最好不要包含特殊字符。所有使用此服务的群，都使用这个配置的名称
+; 示例：
+; USER_NAME=AI助理
+USER_NAME=
+
+; GROUP_NAME是支持的群名称，多个群请用英文输入法的逗号分隔。群名称最好不要包含特殊字符
+; 示例：
+; GROUP_NAME=董小姐的买菜群,奢侈品二手群,驴友1群,AI助理开发群
+GROUP_NAME=
+
+; WORD_FILTER是关键词过滤，请用英文输入法的逗号分隔。群里的提问，匹配到关键词则不回答
+; 示例：
+; WORD_FILTER=123测试,XXX
+WORD_FILTER=
+
+; FOREIGN_ADDR是远程访问路径
+; 示例：
+; FOREIGN_ADDR=http://47.241.11.101:80/api/ask-ai
+FOREIGN_ADDR=

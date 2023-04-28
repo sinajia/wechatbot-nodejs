@@ -1,0 +1,12 @@
+node_modules
+WechatEveryDay.memory-card.json
+.env
+test.js
+package-lock.json
+yarn.lock
+Chromium.app
+pubkey
+const.json
+config.ini
+tests
+bin/node.exe
