@@ -25,5 +25,5 @@
 1. 运行node bin\ini.js，创建pubkey；
 2. 把config.ini.sample改为config.ini，根据注释配置config.ini；
 3. 运行node index.js，扫码登录；
-4. 配置服务端，需要pubkey和openAI的key。服务端程序应该运行在一台国外ip的服务器上（服务端参考[这里]()）。如不方便也可忽略这一步，但需使用别人提供的服务，则只需提供第一步得到的pubkey即可；
+4. 配置服务端，需要pubkey和openAI的key。服务端程序应该运行在一台国外ip的服务器上（服务端参考[这里](https://github.com/sinajia/wechatbot-server)）。如不方便也可忽略这一步，但需使用别人提供的服务，则只需提供第一步得到的pubkey即可；
 5. 正确填写config.ini里面的FOREIGN_ADDR。
