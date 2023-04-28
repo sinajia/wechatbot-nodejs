@@ -21,7 +21,7 @@
 
 
 # 使用步骤
-0. 安装node环境，后期会提供一个免安装环境，省去此步骤；
+0. 安装node环境、依赖，后期会提供一个免安装环境，省去此步骤；
 1. 运行node bin\ini.js，创建pubkey；
 2. 把config.ini.sample改为config.ini，根据注释配置config.ini；
 3. 运行node index.js，扫码登录；
