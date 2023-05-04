@@ -3,9 +3,7 @@ import stripMarkdown from 'strip-markdown'
 import fetch from 'node-fetch'
 import { createHash } from 'node:crypto'
 import randomstring from 'randomstring'
-import utilsCheck from '../utils/check.cjs'
-
-const { sign, publicKey } = utilsCheck
+import { sign, publicKey } from '../utils/check.js'
 
 export async function getOpenAiReply(prompt, userid, name, remoteaddr) {
   var reply = ''

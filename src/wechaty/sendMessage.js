@@ -54,14 +54,14 @@ export async function defaultMessage(msg, bot) {
   console.log('config', config.USER_NAME, rooms, wordfilter, remoteaddr)
 
   const contact = msg.talker()
-  const content = msg.text()
+  var content = msg.text()
   const room = msg.room()
   const roomName = (await room?.topic()) || null
   const roomId = room?.id || null
   const name = contact.name()
   const userid = contact.id
 
-  console.log('消息内容', content)
+  console.log('原始消息内容', content)
   console.log('群名称', roomName)
   console.log('群ID', roomId)
   console.log('发送人微信名称', name)
@@ -78,6 +78,9 @@ export async function defaultMessage(msg, bot) {
   if(!remoteaddr) {
     return
   }
+  if (!content) {
+    return
+  }
 
   // 文字
   if (msg.type() == bot.Message.Type.Text) {
@@ -85,9 +88,14 @@ export async function defaultMessage(msg, bot) {
       return
     }
 
+    content = content.trim()
+    if (!content) {
+      return
+    }
+
     // 支持群消息
     if (roomId && roomName) {
-      if (!content || !content.startsWith(atusername)) {
+      if (!content.startsWith(atusername)) {
         return
       }
 
@@ -119,10 +127,6 @@ export async function defaultMessage(msg, bot) {
       }
     } else {
       // 私人聊天
-      if (!content) {
-        return
-      }
-
       if (!checkAskMe(content)) {
         return
       }
